@@ -10,7 +10,7 @@ services:
       - "/etc/timezone:/etc/timezone:ro"
       - "/etc/localtime:/etc/localtime:ro"
     ports:
-      - "0.0.0.0:8081:8080"
+      - "0.0.0.0:8080:8080"
     command: >
       trade
       --logfile /freqtrade/user_data/logs/freqtrade_rsi_auto_pmax.log

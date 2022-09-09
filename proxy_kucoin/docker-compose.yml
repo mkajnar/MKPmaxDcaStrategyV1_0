@@ -1,0 +1,12 @@
+---
+version: '3'
+services:
+  proxy:
+    image: mikekonan/exchange-proxy:latest-amd64
+    deploy:
+      replicas: 1
+    restart: unless-stopped
+    ports:
+      - "0.0.0.0:8888:8080"
+    container_name: proxy
+    command: -verbose 1
