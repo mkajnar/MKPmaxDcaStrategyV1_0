@@ -27,8 +27,17 @@ from freqtrade.strategy import (BooleanParameter, CategoricalParameter, DecimalP
 import talib.abstract as ta
 import pandas_ta as pta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
-from user_data.strategies.Decorators import safe
 
+def safe(f):
+    def safe_f(*args, **kwargs):
+        try:
+            return f(*args, **kwargs)
+        except Exception as ex:
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            print('{} - {}'.format(exc_type, exc_tb.tb_lineno))
+            return None
+
+    return safe_f
 
 class MKPmaxDcaStrategyV1_0(IStrategy):
     INTERFACE_VERSION = 3
