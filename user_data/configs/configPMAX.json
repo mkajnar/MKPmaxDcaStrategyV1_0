@@ -51,8 +51,8 @@
                   "timeout": 60000,
                   "urls": {
                         "api": {
-                        "public": "http://89.203.251.159:8888/kucoin",
-                        "private": "http://89.203.251.159:8888/kucoin"
+                        "public": "http://0.0.0.0:8888/kucoin",
+                        "private": "http://0.0.0.0:8888/kucoin"
                     }
                   }
                 },

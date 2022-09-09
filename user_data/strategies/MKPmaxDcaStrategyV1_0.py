@@ -48,8 +48,8 @@ class MKPmaxDcaStrategyV1_0(IStrategy):
     #buy_use_exit_signal = BooleanParameter(default=False, space="buy")
     #buy_position_adjustment_enable = BooleanParameter(default=True, space="buy")
 
-    if os.path.exists(f"{sys.path[0]}/MkPmaxStrategy2.json"):
-        x = json.loads(open(f'{sys.path[0]}/MkPmaxStrategy2.json',mode='r').read())
+    if os.path.exists(f"{sys.path[0]}/MKPmaxDcaStrategyV1_0.json"):
+        x = json.loads(open(f'{sys.path[0]}/MKPmaxDcaStrategyV1_0.json',mode='r').read())
         buy = x['params']['buy']
         buy_dca_koef.value = buy['buy_dca_koef']
         buy_exit_profit_only.value = buy['buy_exit_profit_only']
