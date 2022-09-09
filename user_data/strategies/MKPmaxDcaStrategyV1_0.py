@@ -69,7 +69,7 @@ class MKPmaxDcaStrategyV1_0(IStrategy):
 
 
     # Optimal timeframe for the strategy.
-    timeframe = '5m'
+    timeframe = '1m'
     position_adjustment_enable = True
 
     # Can this strategy go short?
